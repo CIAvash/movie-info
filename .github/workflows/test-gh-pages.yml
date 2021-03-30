@@ -1,0 +1,39 @@
+name: Test, GitHub pages
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    container:
+      image: node:latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          npm install -g pnpm
+          pnpm install
+
+      - name: Test
+        run: pnpm test
+
+      - name: Build
+        if: ${{ github.event_name != 'pull_request' }}
+        run: pnpm build
+
+      - name: Deploy
+        needs: Build
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          cname: movie-info.ciavash.name
