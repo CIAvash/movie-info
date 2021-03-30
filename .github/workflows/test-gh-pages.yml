@@ -24,12 +24,14 @@ jobs:
           pnpm install
   test:
     runs-on: ubuntu-latest
+    needs: install
     steps:
       - name: Test
         run: pnpm test
 
   build:
     runs-on: ubuntu-latest
+    needs: test
     steps:
       - name: Build
         if: ${{ github.event_name != 'pull_request' }}
