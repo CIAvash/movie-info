@@ -1,6 +1,6 @@
 ![Screenshot of a title](screenshots/MovieInfo-title.jpg)
 
-[MovieInfo](https://ciavash.github.io/MovieInfo/)
+[MovieInfo](https://movie-info.ciavash.name/)
 ==========
 
 A web app for viewing movie information and ratings.
@@ -18,12 +18,12 @@ It also shows an overall rating, which is the average of the ratings from the af
 Repository
 ==========
 
-<https://github.com/CIAvash/MovieInfo>
+<https://github.com/CIAvash/movie-info>
 
 Bugs
 ====
 
-<https://github.com/CIAvash/MovieInfo/issues>
+<https://github.com/CIAvash/movie-info/issues>
 
 Author
 ======
