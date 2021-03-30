@@ -9,7 +9,7 @@ on:
       - master
 
 jobs:
-  deploy:
+  install:
     runs-on: ubuntu-latest
 
     container:
@@ -22,16 +22,21 @@ jobs:
         run: |
           npm install -g pnpm
           pnpm install
-
+  test:
+    steps:
       - name: Test
         run: pnpm test
 
+  build:
+    steps:
       - name: Build
         if: ${{ github.event_name != 'pull_request' }}
         run: pnpm build
 
+  deploy:
+    needs: Build
+    steps:
       - name: Deploy
-        needs: Build
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
