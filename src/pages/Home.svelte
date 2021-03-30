@@ -50,7 +50,7 @@
             <SearchForm/>
         </div>
         <div class="home-footer small">
-            <a href="https://github.com/CIAvash/MovieInfo">MovieInfo</a>
+            <a href="https://github.com/CIAvash/movie-info">MovieInfo</a>
             is a Libre Software created by <a href="https://ciavash.name">Siavash Askari Nasr</a>.
             It uses <a href="https://omdbapi.com/">OMDB API</a> for obtaining data.
         </div>
