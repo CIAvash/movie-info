@@ -23,18 +23,21 @@ jobs:
           npm install -g pnpm
           pnpm install
   test:
+    runs-on: ubuntu-latest
     steps:
       - name: Test
         run: pnpm test
 
   build:
+    runs-on: ubuntu-latest
     steps:
       - name: Build
         if: ${{ github.event_name != 'pull_request' }}
         run: pnpm build
 
   deploy:
-    needs: Build
+    runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
