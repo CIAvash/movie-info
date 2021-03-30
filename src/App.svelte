@@ -37,7 +37,6 @@
     <div class="container">
         <Header/>
         <main>
-            <noscript>This app requires JavaScript.</noscript>
             <Router {routes} />
         </main>
     </div>
