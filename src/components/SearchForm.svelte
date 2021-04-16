@@ -6,7 +6,6 @@
     
     function submitSearch () : void {
         if (query) push('/search/' + query + '/' + (year ? `?year=${year}` : ''));
-        query = year = '';
     }
 </script>
 <style lang="scss">
