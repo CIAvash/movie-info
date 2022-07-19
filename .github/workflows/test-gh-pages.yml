@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: node:latest
+      image: node:14
 
     steps:
       - uses: actions/checkout@v2
