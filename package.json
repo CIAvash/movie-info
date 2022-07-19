@@ -17,6 +17,7 @@
         "@rollup/plugin-commonjs": "^17.0.0",
         "@rollup/plugin-node-resolve": "^11.0.0",
         "@rollup/plugin-typescript": "^6.0.0",
+        "@testing-library/dom": "^7.21.4",
         "@testing-library/jest-dom": "^5.11.9",
         "@testing-library/svelte": "^3.0.3",
         "@testing-library/user-event": "^13.0.16",
