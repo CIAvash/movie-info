@@ -23,9 +23,8 @@ jobs:
           npm install -g pnpm
           pnpm install
 
-      - name: Test
-        # run: pnpm test
-        run: pnpm exec jest
+      # - name: Test
+      #   run: pnpm test
 
       - name: Build
         id: build
